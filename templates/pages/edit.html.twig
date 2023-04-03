@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Article{% endblock %}
+{% block main %}
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Edit Article</h1>
+            </div>
+        </div>
+        <div class="py-lg-1">
+            <a class="btn btn-secondary float-right" href="{{ path('home') }}">
+                View All Articles
+            </a>
+        </div>
+    </section>
+
+    <main>
+        <div class="bg-light py-5">
+            <div class="container w-50">
+                <div>
+
+                    {% include '_partials/form.html.twig' with {
+                        article: article
+                    } %}
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
