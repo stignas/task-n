@@ -20,7 +20,6 @@ class EditController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $article->setUpdatedAt(new \DateTimeImmutable());
             $manager->persist($article);
             $manager->flush();
 
