@@ -70,7 +70,10 @@ class __TwigTemplate_7ef8d986528fa61ab19cccb119168d5b extends Template
         echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
             <small class=\"text-muted\">
-                X mins
+                ";
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "readTime", [0 => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "text", [], "any", false, false, false, 17)], "method", false, false, false, 17), "html", null, true);
+        echo "
             </small>
         </div>
     </div>
@@ -93,7 +96,7 @@ class __TwigTemplate_7ef8d986528fa61ab19cccb119168d5b extends Template
 
     public function getDebugInfo()
     {
-        return array (  69 => 14,  65 => 13,  56 => 8,  54 => 7,  48 => 4,  43 => 2,  40 => 1,);
+        return array (  75 => 17,  69 => 14,  65 => 13,  56 => 8,  54 => 7,  48 => 4,  43 => 2,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -114,7 +117,7 @@ class __TwigTemplate_7ef8d986528fa61ab19cccb119168d5b extends Template
                 <a href=\"{{ path('article_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
             <small class=\"text-muted\">
-                X mins
+                {{ article.readTime(article.text) }}
             </small>
         </div>
     </div>
