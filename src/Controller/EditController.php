@@ -24,7 +24,6 @@ class EditController extends AbstractController
             $manager->flush();
 
             $this->addFlash('success','Article updated');
-
             return $this->redirectToRoute('home');
         }
 
