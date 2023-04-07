@@ -72,8 +72,8 @@ class __TwigTemplate_7ef8d986528fa61ab19cccb119168d5b extends Template
             <small class=\"text-muted\">
                 ";
         // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "readTime", [0 => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "text", [], "any", false, false, false, 17)], "method", false, false, false, 17), "html", null, true);
-        echo "
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "getReadTimeInMinutes", [0 => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "text", [], "any", false, false, false, 17)], "method", false, false, false, 17), "html", null, true);
+        echo " min.
             </small>
         </div>
     </div>
@@ -117,7 +117,7 @@ class __TwigTemplate_7ef8d986528fa61ab19cccb119168d5b extends Template
                 <a href=\"{{ path('article_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
             <small class=\"text-muted\">
-                {{ article.readTime(article.text) }}
+                {{ article.getReadTimeInMinutes(article.text) }} min.
             </small>
         </div>
     </div>

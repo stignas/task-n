@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="py-5 text-center">
                     <h1 class="fw-bold">{{ article.title }}</h1>
-                    <p class="text-muted">{{ article.readTime(article.text) }}</p>
+                    <p class="text-muted">{{ article.getReadTimeInMinutes(article.text) }} min.</p>
                 </div>
 
                 <img class="img-fluid" src="{{ article.image }}" alt="">

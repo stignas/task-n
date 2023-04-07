@@ -92,6 +92,12 @@ return [[
 '[C]App%5CEntity%5CArticle%23setImage' => 1,
 'App%5CEntity%5CArticle%23getUpdatedAt' => 0,
 '[C]App%5CEntity%5CArticle%23getUpdatedAt' => 1,
+'App%5CEntity%5CArticle%23setUpdatedAt' => 0,
+'[C]App%5CEntity%5CArticle%23setUpdatedAt' => 1,
+'App%5CEntity%5CArticle%23getReadTime' => 0,
+'[C]App%5CEntity%5CArticle%23getReadTime' => 1,
+'App%5CEntity%5CArticle%23wordCount' => 0,
+'[C]App%5CEntity%5CArticle%23wordCount' => 1,
 'App%5CEntity%5CArticle%24id' => 0,
 '[C]App%5CEntity%5CArticle%24id' => 1,
 'App%5CEntity%5CArticle%24title' => 0,
@@ -1026,7 +1032,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1680526862,
+1 => 1680797870,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

@@ -27,9 +27,9 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
-    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     #[Gedmo\Timestampable(on: "update")]
-    private ?\DateTimeImmutable $updated_at;
+    private \DateTime $updated_at;
 
     /**
      * @return int|null
@@ -87,13 +87,15 @@ class Article
         $this->image = $image;
     }
 
-    public function getUpdatedAt(): \DateTimeImmutable
+    public function getUpdatedAt(): \DateTime
     {
         return $this->updated_at;
     }
 
-    public function setUpdatedAt(): void
+    public function setUpdatedAt(\DateTime $updated_at)
     {
-        $this->updated_at = new \DateTimeImmutable();
+        $this->updated_at = $updated_at;
+
+        return $this;
     }
 }
