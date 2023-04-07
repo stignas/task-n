@@ -14,7 +14,7 @@
                 <a href="{{ path('article_edit', {id: article.id}) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
             </div>
             <small class="text-muted">
-                {{ article.readTime(article.text) }}
+                {{ article.getReadTimeInMinutes(article.text) }} min.
             </small>
         </div>
     </div>

@@ -4,15 +4,11 @@ namespace App\Service;
 
 trait ReadingTime
 {
-    public function readTime(string $text, int $wordsPerMinute = 200): string
+    public function getReadTimeInMinutes(string $text, int $wordsPerMinute = 200): int
     {
-        $min = ceil($this->wordCount($text) / $wordsPerMinute);
-        return sprintf('%d min.', $min);
-    }
+        // Returns word count, longer than 3 word-chars.
+        $wordCount = preg_match_all('/\w{4,}/', strip_tags($text));
 
-    private function wordCount(string $text): int
-    {
-        $text = strip_tags($text);
-        return preg_match_all('/\S{4,}/', $text);
+        return ceil($wordCount / $wordsPerMinute);
     }
 }
