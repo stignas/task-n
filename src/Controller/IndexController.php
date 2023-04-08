@@ -13,7 +13,7 @@ class IndexController extends AbstractController
     public function list(ArticleRepository $articleRepository): Response
     {
         return $this->render('pages/index.html.twig', [
-            'articles' => $articleRepository->findBy(array(), array('updated_at' => 'DESC')),
+            'articles' => $articleRepository->findBy(array(), array('updatedAt' => 'DESC')),
         ]);
     }
 }

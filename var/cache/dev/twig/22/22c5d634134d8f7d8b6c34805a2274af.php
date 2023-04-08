@@ -90,12 +90,11 @@ class __TwigTemplate_2615dc809c1b57b0e4268c83df3ffc13 extends Template
         <div class=\"bg-light py-5\">
             <div class=\"container w-50\">
                 <div>
-
                     ";
-        // line 23
-        $this->loadTemplate("_partials/form.html.twig", "pages/edit.html.twig", 23)->display(twig_array_merge($context, ["article" =>         // line 24
-(isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 24, $this->source); })())]));
-        // line 26
+        // line 22
+        $this->loadTemplate("_partials/form.html.twig", "pages/edit.html.twig", 22)->display(twig_array_merge($context, ["article" =>         // line 23
+(isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 23, $this->source); })())]));
+        // line 25
         echo "                </div>
             </div>
         </div>
@@ -118,7 +117,7 @@ class __TwigTemplate_2615dc809c1b57b0e4268c83df3ffc13 extends Template
 
     public function getDebugInfo()
     {
-        return array (  99 => 26,  97 => 24,  96 => 23,  82 => 12,  73 => 5,  66 => 4,  53 => 3,  36 => 1,);
+        return array (  98 => 25,  96 => 23,  95 => 22,  82 => 12,  73 => 5,  66 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -144,7 +143,6 @@ class __TwigTemplate_2615dc809c1b57b0e4268c83df3ffc13 extends Template
         <div class=\"bg-light py-5\">
             <div class=\"container w-50\">
                 <div>
-
                     {% include '_partials/form.html.twig' with {
                         article: article
                     } %}
