@@ -10,7 +10,7 @@ class ReadingTimeTest extends TestCase
 
     use ReadingTime;
 
-    public function testGetReadTime()
+    public function testGetReadTimeInMinutes()
     {
         foreach ($this->provider() as $testCase) {
             $this->assertEquals($this->getReadTimeInMinutes($testCase['value']), $testCase['expected']);
